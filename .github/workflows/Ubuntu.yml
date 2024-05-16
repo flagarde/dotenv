@@ -5,9 +5,12 @@ on:
   pull_request:
   workflow_dispatch:
 
-jobs:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
-  test:
+jobs:
+  Ubuntu:
     name: Run on Ubuntu
     runs-on: ubuntu-latest
     steps:
