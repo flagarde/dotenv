@@ -23,3 +23,9 @@ jobs:
       - name: Print .env
         run : |
           dir env:
+      - name: ⬇️ Setup CMake
+        uses: lukka/get-cmake@latest
+        with:
+          cmakeVersion: ^3
+      - name: 🔧 Configure
+        run: cmake -S ${{ env.CMAKE_SOURCE_PREFIX }} -B ${{ env.CMAKE_BUILD_PREFIX }}
