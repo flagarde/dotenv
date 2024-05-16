@@ -17,4 +17,5 @@ jobs:
         with:
           repository: 'flagarde/dotenv'
       - name: Print .env
-        run : env
+        run : |
+          env
