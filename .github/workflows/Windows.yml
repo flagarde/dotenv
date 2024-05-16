@@ -18,4 +18,4 @@ jobs:
           repository: 'flagarde/dotenv'
       - name: Print .env
         run : |
-          set
+          SET
