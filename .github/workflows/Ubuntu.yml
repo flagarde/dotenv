@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  Ubuntu:
-    name: Run on Ubuntu
+
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
